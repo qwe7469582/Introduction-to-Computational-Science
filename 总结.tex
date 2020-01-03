@@ -1,0 +1,292 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\usepackage{natbib}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\usepackage{graphicx}
+\pagestyle{plain}	
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{caption2}
+\usepackage{datetime} %日期
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\renewcommand{\captionlabelfont}{\small}
+\renewcommand{\captionfont}{\small}
+\begin{document}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=8cm]{upc.png}
+
+    \label{figupc}
+\end{figure}
+
+	\begin{center}
+		\quad \\
+		\quad \\
+		\heiti \fontsize{45}{17} \quad \quad \quad 
+		\vskip 1.5cm
+		\heiti \zihao{2} 《计算科学导论》课程总结报告
+	\end{center}
+	\vskip 2.0cm
+		
+	\begin{quotation}
+% 	\begin{center}
+		\doublespacing
+		
+        \zihao{4}\par\setlength\parindent{7em}
+		\quad 
+
+		学生姓名：\underline{\qquad  朱宜昌 \qquad \quad}
+
+		学\hspace{0.61cm} 号：\underline{\qquad 1709030129\qquad}
+		
+		专业班级：\underline{\qquad 物理1701 \qquad  }
+		
+        学\hspace{0.61cm} 院：\underline{\qquad \quad 理学院 \qquad \quad}
+% 	\end{center}
+		\vskip 2cm
+		\centering
+		\begin{table}[h]
+            \centering 
+            \zihao{4}
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+            % 这里的rl 与表格对应可以看到，姓名是r，右对齐的；学号是l，左对齐的；若想居中，使用c关键字。
+                \hline
+                课程认识 & 问题思 考 & 格式规范  & IT工具  & Latex附加  & 总分 & 评阅教师 \\
+                30\% & 30\% & 20\% & 20\% & 10\% &  &  \\
+                \hline
+                 & & & & & &\\
+                & & & & & &\\
+                \hline
+            \end{tabular}
+        \end{table}
+		\vskip 2cm
+		\today
+	\end{quotation}
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+% 在这之前是封面，在这之后是正文
+\section{引言}
+学习一门学科之前，若是有机会对整个学科包括的内容有一个大致的了解，对于之后的学习是极有帮助的。“计算科学导论”就扮演着这样的一个角色，我是在大三才修了这门课，但是老师曾告诉我说有了一定基础之后听这门课会有更深的体会，事实证明确实是这样，对于正在选课转专业的我来说，这也不免是一种幸运。大一的寒假就曾去图书馆借过佛罗赞的《计算机科学导论》来读，通过这门课的学习，我对计算机科学各方面的知识体系有了更加深刻地了解，也对自己将来的发展方向有了一定的思考。通过本文大致介绍课上学习到的部分内容以及自己的一些学习和思考。
+
+\section{对计算科学导论这门课程的认识、体会}
+“计算科学导论”是一个对计算机专业的概括性、引导性的课程。导论是针对计算机科学初学者而开设的，它在一个初学者对整个学科还缺乏全面了解的情况下，从科学哲学的角度对计算机科学与技术的定义，特点，基本问题等进行阐述。并不要求初学者广泛借阅图书资料，因为初学者并不具备同时掌握几个体系的知识和能力，并且涉猎相关知识较少。但是导论课的引导性尤其重要，通过对导论课的学习，我发现基本上可以了解计算机学科是什么学科，是做什么的学科，怎么做的。这些我感觉对之后的学习尤为重要，很遗憾没有在大一就学到这门课程，但是现在学有现在特有的收获，我对自己的学习方向有了更深的理解和更明确的规划，对我之后的学习和发展具有极好的作用。\par
+
+\subsection{科学哲学的思想方法}
+导论课第一章————科学哲学的思想方法。老师在本章开始提到的第一句话是“真正理解一件事物最好的方式莫过于去探寻它的历史”，对于每个学科来说这句话都是金句，对于计算机学科也是如此。了解一个人最好的方法是去探寻他的过去，因为过去决定了他的现在；对于一个问题来说，想要解决它就要先了解他的起因经过；对于一个学科也是如此，如果了解了这个学科的历史，就能更好的了解它当下的发展，或许是有一定的必然性的。之前的一个老师说，想要在一个学科有历史性的突破，就必须先对它的历史足够了解。从历史中总结方法，探寻观念，内化后将会是一种无比强大的力量。
+
+科学哲学是从哲学角度考察科学的一门学科，以科学活动和科学理论为研究对象，主要探讨科学的本质、科学知识的获得和检验、科学的逻辑结构等有关科学认识论和科学方法论方面的基本问题。一般说来，科学哲学研究的是科学的本质、科学的合理性、科学的研究活动、科学方法论、科学认识论、科学的逻辑结构、科学发展的规律等等[1]，因而它与哲学的许多学科例如形而上学、认识论和逻辑学有着密切的关系。传统的科学哲学是形而上学的一部分，而现代科学哲学则是从反形而上学起家的，它在20世纪的第一个系统形态就是逻辑实证主义。
+
+我们要意识到：我们应该相信科学，迄今为止科学方法是我们能够发现具有真理性知识的最高方法，但是我们也不能迷信科学、迷信科学家，我们要有自己的判断力。在面对科学结论时，我们需要自己审视它本身的科学性问题，这就是对我们的科学素养、科学常识的考验了。我一直认为一个学科上升到一定的高度之后，只有哲学才能解释，而用哲学的方法去理解，能够帮助人们更好的理解和发展科学。
+
+\subsection{计算机科学的基本概念和基本知识}
+本章基本上涵盖了计算机专业各个方向的内容，对于初学者来说有很好地引导作用，可以很好的启发之后的学习。涉及了计算机网络、数字逻辑电路、组成原理、编程语言、人工智能等各个方面，基本涉及到了计算机专业本科四年所有的课程内容。其中有硬件知识也有软件知识，当然对应的分析方法也不同。本章介绍了学科基础方向，也对当下的热门领域进行了介绍，目前工业上应用广泛的一些技术也都有了一定的介绍。对我个人而言，我更倾向于人工智能技术，利用机器学习算法进行舆情分析和自然语言处理等。
+
+\subsubsection{什么是计算机科学}
+计算机科学技术是研究计算机的设计与制造和利用计算机进行信息获取、表示、存储、处理、控制等的理论、原则、方法和技术的学科。它包括科学与技术两个方面，科学侧重与研究现象，揭示规律;技术则侧重于研制计算机和研究使用计算机进行信息处理的方法和技术手段。科学是技术的依据，技术是科学的体现;技术得益于科学，它又向科学提出新的课题。科学与技术相辅相成、互为作用，二者高度融合是计算机科学与技术学科的突出特点。计算机科学与技术包括计算机科学、计算机工程、软件工程、信息工程等领域，计算机科学技术的迅猛发展，除了源于微电子学的发展,主要源于其应用的广泛性与强烈需求。它已逐渐渗透到人类社会的各个领域，成为经济发展的倍增器，学文化与社会发展的催化剂。应用是计算机科学与技术发展的动力、源泉和归宿,而计算机科学与技术又不断为应用提供日益先进的方法、设备和环境[2]。
+
+\subsubsection{计算科学的发展过程}
+图灵机的发明打开了现代计算机的大门和发展之路。1946，年随着现代意义上的电子数字计算机ENIAC的诞生，掀起了社会快速发展的崭新的一页，计算机工作和运行就摆在了人们的面前。
+
+\subsubsection{自然语言处理}
+自然语言处理是计算机科学领域与人工智能领域中的一个重要方向。它研究能实现人与计算机之间用自然语言进行有效通信的各种理论和方法。自然语言处理是一门融语言学、计算机科学、数学于一体的科学。因此，这一领域的研究将涉及自然语言，即人们日常使用的语言，所以它与语言学的研究有着密切的联系，但又有重要的区别。自然语言处理并不是一般地研究自然语言，而在于研制能有效地实现自然语言通信的计算机系统，特别是其中的软件系统。因而它是计算机科学的一部分。自然语言处理（NLP）是计算机科学，人工智能，语言学关注计算机和人类（自然）语言之间的相互作用的领域。因此，自然语言处理是与人机交互的领域有关的。在自然语言处理面临很多挑战，包括自然语言理解，因此，自然语言处理涉及人机交互的面积。在NLP诸多挑战涉及自然语言理解，即计算机源于人为或自然语言输入的意思，和其他涉及到自然语言生成。
+
+现代NLP算法是基于机器学习，特别是统计机器学习。机器学习范式是不同于一般之前的尝试语言处理。语言处理任务的实现，通常涉及直接用手的大套规则编码。
+
+许多不同类的机器学习算法已应用于自然语言处理任务。这些算法的输入是一大组从输入数据生成的“特征”。一些最早使用的算法，如决策树，产生硬的if-then规则类似于手写的规则，是再普通的系统体系。然而，越来越多的研究集中于统计模型，这使得基于附加实数值的权重，每个输入要素柔软，概率的决策。此类模型具有能够表达许多不同的可能的答案，而不是只有一个相对的确定性，产生更可靠的结果时，这种模型被包括作为较大系统的一个组成部分的优点[3]。
+
+自然语言处理研究逐渐从词汇语义成分的语义转移，进一步的，叙事的理解。然而人类水平的自然语言处理，是一个人工智能完全问题。它是相当于解决中央的人工智能问题使计算机和人一样聪明，或强大的AI。自然语言处理的未来一般也因此密切结合人工智能发展。
+
+目前NLP技术已经得到广泛应用，涉及医学、化学、物理等多个领域。例如Amy J.C. Trappey等使用机器学习和自然语言处理技术实现了智能编辑专利摘要[4]，Chen Long等进行了使用结合知识库和深度学习的自然语言处理系统提取药物和相关的药物不良事件的研究[5]。
+
+\iffalse
+图片插入的样例：\par
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1.7]{universe}
+	\caption{The Universe}
+	\label{fig:universe}
+\end{figure}
+表格插入样例：\par
+\begin{table}[h]
+    \centering
+    \caption{这是科学系的花名册}
+\begin{tabular}{rl}
+% 这里的rl 与表格对应可以看到，姓名是r，右对齐的；学号是l，左对齐的；若想居中，使用c关键字。
+    \hline
+    姓名 & 学号 \\
+    \hline
+    张三 & 190704xxxx+++ \\ 
+    李四 & 190704yyyy \\
+    王二五 & 190704zzzz\\
+    \hline
+\end{tabular}
+    \label{table1}
+\end{table}
+\fi
+
+\subsection{计算科学的意义、内容和方法}
+自然科学规律通常用各种类型的数学方程式表达，计算科学的目的就是寻找这些方程式的数值解。这种计算涉及庞大的运算量，简单的计算工具难以胜任。在计算机出现之前，科学研究和工程设计主要依靠实验或试验提供数据，计算仅处于辅助地位。计算机的迅速发展，使越来越多的复杂计算成为可能。利用计算机进行科学计算带来了巨大的经济效益，同时也使科学技术本身发生了根本变化：传统的科学技术只包括理论和试验两个组成部分，使用计算机后，计算已成为同等重要的第三个组成部分。
+
+计算机的科学计算能力仍然有限，例如在天气数值预报方面只能进行中、短期预报，在飞机气动力设计方面只能分部件进行，在石油勘探方面只能处理粗糙的数学模型。为要进行长期的天气数值预报、整体的飞机气动力设计和在石油勘探中处理更精确的数学模型，都必须配备更强大的计算机。许多基础学科和工程技术部门已提出超过现有计算能力的大型科学计算问题。这些问题的解决，有赖于两方面的努力：一是创造出更高效的计算方法，一是大大提高计算机的速度。
+
+目前已经出现许多计算科学相关工具以及程序设计语言，例如MATLAB、Mathematica、Scilab、COMSOL Multiphysics、SciPy等。
+
+计算科学对于人类社会发展带来的贡献是无法忽略的，从我们平时浏览的网站到现在流行的移动支付、语音识别、以图搜图等，处处少不了计算科学的贡献。当前一些新的技术正在或者将要影响到我们的生活，智慧城市方面如Evan Fallis等进行了智能城市应用中的节能音频采集系统的研究[6]，语音识别方面例如Shilpi Shukla等基于人工神经网络和反向人工蜂群算法的有效语音识别新系统的研究[7]，智慧医疗方面例如吴振君等基于Hadoop的医院智慧医疗信息管理系统设计的研究[8]，计算机科学一直都在改变着世界。
+
+
+\section{进一步的思考}
+在分组演讲中，我讨论了有关遗传算法的部分内容。老师也对我们讨论的内容作了点评，确实，当前的遗传算法仍然有着一定的局限性，但是经过改进后可以得到不错的效果。课后我对改进的遗传算法有了进一步的学习和思考。
+
+遗传算法（Genetic Algorithm）是模拟达尔文生物进化论的自然选择和遗传学机理的生物进化过程的计算模型，是一种通过模拟自然进化过程搜索最优解的方法。
+
+由于遗传算法的整体搜索策略和优化搜索方法在计算时不依赖于梯度信息或其它辅助知识，而只需要影响搜索方向的目标函数和相应的适应度函数，所以遗传算法提供了一种求解复杂系统问题的通用框架，它不依赖于问题的具体领域，对问题的种类有很强的鲁棒性，所以广泛应用于许多科学。
+
+遗传算法基本过程为：
+
+1.对待解决问题进行编码,我们将问题结构变换为位串形式编码表示的过程叫编码；而相反将位串形式编码表示变换为原问题结构的过程叫译码。
+
+2.随机初始化群体P(0)：=(p1, p2, … pn)；
+
+3.计算群体上每个个体的适应度值(Fitness)；
+
+4.评估适应度,对当前群体P(t)中每个个体Pi计算其适应度F(Pi)，适应度表示了该个体的性能好坏；
+
+5.按由个体适应度值所决定的某个规则应用选择算子产生中间代Pr(t)；
+
+6.依照Pc选择个体进行交叉操作；
+
+7.仿照Pm对繁殖个体进行变异操作；
+
+8.没有满足某种停止条件，则转第3步，否则进入9；
+
+9.输出种群中适应度值最优的个体；
+
+程序的停止条件最简单的有如下二种：完成了预先给定的进化代数则停止；种群中的最优个体在连续若干代没有改进或平均适应度在连续若干代基本没有改进时停止。
+
+下面伪代码简单说明了遗传算法操作过程：
+
+{choose an intial population
+
+For each h in population,compute Fitness(h)
+
+While(max Fitness(h) < Fitnessthreshold)
+
+do selection//选择
+
+do crossover//交叉
+
+do mutation  //变异
+
+update population
+
+For each h in population,compute Fitness(h)
+
+Return best Fitness}
+
+通过遗传算法的改进，可以在目前的科学研究中起到不错的效果，改进适应度函数、收敛条件、结合其他算法等。例如Yang Su等使用改进遗传算法进行了面向利益相关者的多目标过程优化的研究[9]，郗伟杰等基于遗传算法优化BP神经网络的接触网磨耗预测[10]，霍晴晴等基于改进遗传算法的生鲜多目标闭环物流网络模型[11]。遗传算法改进后收敛速度、全局收敛概率等都可以得到较大的提高，对于后续应用都很有帮助，但是需要针对不同的需求进行特殊的设计。
+\par
+
+\section{总结}
+与我之前读过的那本《计算机科学导论》略有不同，这门课程更多上升到了理论层次并且对当下的热门方向进行了阐述，老师要求我们每个人都参与到汇报讲述中，让我们了解到了更多前沿知识，也锻炼了个人的能力。不得不说，这是一门含金量很高的课，对于计算机专业的学生来说，很好地帮助同学们了解了知识体系的组成，不同方向的大致内容。对我自己来说，课程很好的对我起到了引导作用，使我对自己将来的发展方向有了进一步的深入思考。老师和蔼可亲，认真负责，雨课堂的内容足见老师的辛苦，感谢。\par
+
+
+\section{附录}
+\begin{itemize}
+    \item 申请Github账户，给出个人网址和个人网站截图
+    
+https://github.com/qwe7469582	见图一
+\begin{figure}[H]
+	\centering
+	{
+		\includegraphics[width=4.5cm]{git.png}}
+	\hspace{0in}    %每张图片中间空闲
+	\caption{Github}
+\end{figure}
+    \item 注册观察者、学习强国、哔哩哔哩APP，给出对应的截图
+    
+    见图二
+\begin{figure}[H]
+	\centering
+	{
+		\includegraphics[width=4.5cm]{gcz.png}}
+	\hspace{0in}    %每张图片中间空闲
+	{
+		\includegraphics[width=4.5cm]{xxqg.png}}
+	\hspace{0in}
+	{
+		\includegraphics[width=4.5cm]{B.png}}
+	\hspace{0in}
+
+	\caption{观察者、学习强国、B站}
+\end{figure}
+    \item 注册CSDN、博客园账户，给出个人网址和个人网站截图
+    
+    CSDN:  https://blog.csdn.net/qwe7469582
+    
+    博客园:  https://home.cnblogs.com/u/1914742/
+    
+    \begin{figure}[H]
+    	\centering
+    	{
+    		\includegraphics[width=4.5cm]{csdn.png}}
+    	\hspace{0in}    %每张图片中间空闲
+    	{
+    		\includegraphics[width=4.5cm]{bky.png}}
+    	\hspace{0in}
+    	
+    	\caption{CSDN、博客园}
+    \end{figure}
+    \item 注册小木虫账户，给出个人网址和个人网站截图
+    
+    http://muchong.com/bbs/space.php?uid=20379371 见图四
+    
+    \begin{figure}[H]
+    	\centering
+    	{
+    		\includegraphics[width=4.5cm]{xmc.png}}
+
+    	
+    	\caption{小木虫}
+    \end{figure}
+\end{itemize}
+
+\newpage
+\section*{参考文献}
+
+\begin{flushleft}
+	[1]陈凡,程海东.科学技术哲学在中国的发展状况及趋势[J].中国人民大学学报,2014,28(01):145-153.
+	
+	[2]佘春华.浅谈计算机科学与技术的发展趋势[J].计算机产品与流通,2019(12):3.
+	
+	[3]林奕欧,雷航,李晓瑜,吴佳.自然语言处理中的深度学习:方法及应用[J].电子科技大学学报,2017,46(06):913-919.
+		
+	[4]Amy J.C. Trappey,Charles V. Trappey,Jheng-Long Wu,Jack W.C. Wang. Intelligent compilation of patent summaries using machine learning and natural language processing techniques[J]. Advanced Engineering Informatics,2020,43.
+	
+	[5]Chen Long,Gu Yu,Ji Xin,Sun Zhiyong,Li Haodan,Gao Yuan,Huang Yang. Extracting medications and associated adverse drug events using a natural language processing system combining knowledge base and deep learning.[J]. Journal of the American Medical Informatics Association : JAMIA,2020,27(1).
+		
+	[6]Evan Fallis,Petros Spachos,Stefano Gregori. A Power-Efficient Audio Acquisition System for Smart City Applications[J]. Internet of Things,2019.
+		
+	[7]Shilpi Shukla,Madhu Jain. A novel system for effective speech recognition based on artificial neural network and opposition artificial bee colony algorithm[J]. International Journal of Speech Technology,2019,22(4).
+		
+	[8]吴振君.基于Hadoop的医院智慧医疗信息管理系统设计[J].信息技术,2019,43(12):62-66.
+
+	[9]Yang Su,Saimeng Jin,Xiangping Zhang,Weifeng Shen,Mario R. Eden,Jingzheng Ren. Stakeholder-oriented multi-objective process optimization based on an improved genetic algorithm[J]. Computers and Chemical Engineering,2020,132.
+
+	[10]郗伟杰,李东辉.基于遗传算法优化BP神经网络的接触网磨耗预测[J].电气化铁道,2019,30(S1):47-49.
+	
+	[11]霍晴晴,郭健全.基于改进遗传算法的生鲜多目标闭环物流网络模型[J/OL].计算机应用:1-9[2020-01-03].http://kns.cnki.net/kcms/detail/51.1307.TP.20191216.1455.002.html.
+	
+\end{flushleft}
+
+
+
+
+
+
+
+
+\end{document}
